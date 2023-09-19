@@ -29,7 +29,7 @@ reg[DATA_WIDTH-1:0] p;
 genvar i;
 always @(*) begin
 generate
-    for (i=0; i<DATA_WIDTH; i=i+1) begin
+    for (i=0; i<DATA_WIDTH; i=i+1) begin : gp_gen_logic
         g[i] = a[i] & b[i];
         p[i] = a[i] | b[i];
     end
